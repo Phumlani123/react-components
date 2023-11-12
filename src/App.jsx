@@ -1,9 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Welcome } from "./views";
-import { HeroBanner } from "./views/HeroBanner";
-import { AccordionPage } from "./views/AccordionPage";
-import { PageError } from "./views/PageError";
+import { Welcome, PageError, HeroBanner, AccordionPage } from "./views";
 
 function App() {
   return (

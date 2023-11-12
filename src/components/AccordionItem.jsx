@@ -14,8 +14,9 @@ export const AccordionItem = ({
     <div className="flex gap-2 justify-evenly item--container">
       <div className="flex-1 flex-grow">
         <button
+          data-testid="info-button"
           type="button"
-          className="flex justify-between py-5 w-full font-medium text-left  border-gray-800  border-b-2 text-gray-800"
+          className={`flex justify-between py-5 w-full font-medium text-left  border-gray-800  border-b-2 text-gray-800`}
           onClick={onClick}
         >
           <h2 className="text-2xl font-bold">{heading}</h2>
@@ -35,7 +36,10 @@ export const AccordionItem = ({
           </svg>
         </button>
         <div
-          className="overflow-hidden transition-all duration-500 ease-in-out"
+          data-testid="info"
+          className={`overflow-hidden ${
+            isOpen ? "is-active" : ""
+          } transition-all duration-500 ease-in-out`}
           style={
             isOpen
               ? { height: contentHeight?.current?.scrollHeight }

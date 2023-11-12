@@ -40,7 +40,7 @@ export const HeroBanner = () => {
             {imageUrls.map((url) => (
               <div key={url}>
                 <img
-                  className="my-auto mx-auto w-auto h-8 md:h-10 px-6 hover:opacity-60 transition-all duration-500 ease-in-out"
+                  className="my-auto mx-auto w-auto h-8 md:h-10 px-6 hover:opacity-60 transition-all duration-500 ease-in-out hover:cursor-grab"
                   src={url}
                   alt=""
                 />
