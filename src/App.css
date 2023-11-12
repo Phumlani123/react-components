@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .banner--button-primary {
+    @apply font-bold bg-rose-500 hover:bg-rose-600;
+  }
+  .banner--button-secondary {
+    @apply bg-transparent font-bold border-2 border-rose-500 hover:bg-rose-500 hover:text-neutral-800;
+  }
+
+  .accordion--button-primary {
+    @apply font-medium border-2 rounded-md text-white border-orange-500 bg-orange-500 hover:bg-orange-400 hover:border-orange-400;
+  }
+
+  .accordion--button-secondary {
+    @apply bg-white rounded-md font-medium border-2 border-sky-800 hover:bg-sky-700 hover:text-white;
+  }
+}
+
+.slick-dots li button:before {
+  color: rgb(220 38 38 / 1) !important;
+  font-size: 10px !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: rgb(220 38 38 / 1) !important;
+}
+
+@media screen and (min-width: 576px) {
+  .slick-dots li button:before {
+    display: none !important;
+  }
+
+  .slick-prev,
+  .slick-next {
+    color: rgb(220 38 38 / 1) !important;
+    display: none !important;
+  }
+}
+
+.accordion-item--active {
+  position: relative;
+  max-height: 30rem;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-item--inactive {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion--image1 {
+  margin-top: -5rem;
+}
+
+.accordion--image2 {
+  margin-top: -10rem;
+}
+
+.accordion--image3 {
+  margin-top: -15rem;
+}
+
+.accordion--info {
+  padding-bottom: -51rem;
+}
