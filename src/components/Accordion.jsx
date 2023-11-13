@@ -14,7 +14,7 @@ export const Accordion = () => {
   };
 
   return (
-    <div className="accordion--wrapper">
+    <div data-testid="accordion" className="accordion--wrapper">
       {accordionData.map((item, index) => (
         <AccordionItem
           key={index}

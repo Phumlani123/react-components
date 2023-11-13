@@ -6,8 +6,8 @@ import { imageUrls, sliderSettings } from "../utils";
 
 export const HeroBanner = () => {
   return (
-    <div className="h-100 lg:h-screen bg-cover bg-center bg-[url('./assets/img/main_bg.png')]">
-      <div className="px-2 py-32 lg:py-40 h-full  bg-neutral-950/70">
+    <div className="min-h-screen bg-cover bg-center bg-[url('/img/main_bg.png')]">
+      <div className="px-2 py-32 lg:py-40 min-h-screen  bg-neutral-950/70">
         <div className="max-w-4xl px-8 md:px-32">
           <div className="sm:mb-8 sm:flex ">
             <h3 className="text-xl font-bold text-rose-500">Monolith</h3>

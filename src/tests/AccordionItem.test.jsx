@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { AccordionItem } from "../components/AccordionItem";
 
 const clickEvent = jest.fn();
@@ -22,7 +22,8 @@ describe("AccordionItem", () => {
   it("renders AccordionItem component with info visible onClick", async () => {
     render(
       <AccordionItem
-        isOpen={false}
+        heading={"heading"}
+        index={1}
         info={"I am an accordion item"}
         onClick={clickEvent}
       />
@@ -32,4 +33,22 @@ describe("AccordionItem", () => {
 
     expect(clickEvent).toHaveBeenCalled();
   });
+
+  // it("renders accordion item image", async () => {
+  //   render(
+  //     <AccordionItem
+  //       index={1}
+  //       info={"I am an accordion item"}
+  //       heading={"heading"}
+  //       image={"https://via.placeholder.com/150"}
+  //       onClick={clickEvent}
+  //     />
+  //   );
+  //   const image = await screen.findByTestId("image");
+  //   const button = await screen.findByTestId("info-button");
+  //   fireEvent.click(button);
+  //   await waitFor(() => {
+  //     expect(image).toHaveClass("accordion-item--active");
+  //   });
+  // });
 });

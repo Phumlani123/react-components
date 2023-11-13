@@ -21,8 +21,8 @@ export const AccordionItem = ({
         >
           <h2 className="text-2xl font-bold">{heading}</h2>
           <svg
-            className={`w-6 h-6 shrink-0 transition-all duration-500 ease-in-out ${
-              isOpen ? "rotate-180" : ""
+            className={`w-5 h-5  shrink-0 transition-all duration-500 ease-in-out hover:text-orange-500 ${
+              isOpen ? "-scale-y-100 text-orange-500" : "text-sky-700"
             } `}
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -56,7 +56,7 @@ export const AccordionItem = ({
               />
               <Button
                 className="accordion--button-secondary text-neutral-700"
-                title={"Another CTA"}
+                title={"Get started"}
                 color="amber"
               />
             </div>
@@ -64,6 +64,7 @@ export const AccordionItem = ({
         </div>
       </div>
       <div
+        data-testid="image"
         className={`accordion--image${index} hidden md:block  flex-1 flex-grow overflow-hidden ${
           isOpen ? "accordion-item--active" : "accordion-item--inactive"
         }`}

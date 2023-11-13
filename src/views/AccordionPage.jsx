@@ -1,4 +1,5 @@
 import { Accordion } from "../components";
+
 export const AccordionPage = () => {
   return (
     <div className="max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl my-32 rounded-xl mx-auto bg-slate-50 px-8 md:px-16 py-24">
