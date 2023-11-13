@@ -19,7 +19,7 @@ describe("AccordionItem", () => {
     expect(info).toHaveStyle("height: 0px");
   });
 
-  it("renders AccordionItem component with info visible onClick", async () => {
+  it("renders AccordionItem component onClick", async () => {
     render(
       <AccordionItem
         heading={"heading"}
@@ -33,22 +33,4 @@ describe("AccordionItem", () => {
 
     expect(clickEvent).toHaveBeenCalled();
   });
-
-  // it("renders accordion item image", async () => {
-  //   render(
-  //     <AccordionItem
-  //       index={1}
-  //       info={"I am an accordion item"}
-  //       heading={"heading"}
-  //       image={"https://via.placeholder.com/150"}
-  //       onClick={clickEvent}
-  //     />
-  //   );
-  //   const image = await screen.findByTestId("image");
-  //   const button = await screen.findByTestId("info-button");
-  //   fireEvent.click(button);
-  //   await waitFor(() => {
-  //     expect(image).toHaveClass("accordion-item--active");
-  //   });
-  // });
 });
