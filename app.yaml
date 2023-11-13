@@ -1,0 +1,9 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+  - url: /
+    static_files: react-modules/index.html
+    upload: react-modules/index.html
+  - url: /
+    static_dir: react-modules
